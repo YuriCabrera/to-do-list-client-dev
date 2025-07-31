@@ -1,5 +1,5 @@
 <template>
-   <q-page style="background-color: #f4f6f8; height: 100vh; padding: 0;" class="flex flex-center">
+  <q-page style="background-color: #f4f6f8; height: 100vh; padding: 0" class="flex flex-center">
     <div class="bg-white q-pa-lg shadow-2xl rounded-xl" style="width: 100%; max-width: 600px">
       <h4 class="text-center q-mb-md">📋 Lista de Tarefas</h4>
 
@@ -45,7 +45,7 @@ const novaTarefa = ref({
 
 const tarefas = ref([])
 
-const API_URL = 'http://127.0.0.1:8000/api/tarefa' // ajuste se necessário
+const API_URL = 'http://127.0.0.1:8000/api/tarefa'
 
 const carregarTarefas = async () => {
   const resposta = await axios.get(API_URL)

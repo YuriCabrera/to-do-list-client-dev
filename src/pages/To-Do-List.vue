@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import TarefasList from 'src/components/TarefasList.vue';
-import TarefaForm from 'src/components/TarefaForm.vue';
+import TarefasList from 'src/components/TarefasList.vue'
+import TarefaForm from 'src/components/TarefaForm.vue'
 
 export default {
   components: {
@@ -16,8 +16,8 @@ export default {
   },
   methods: {
     getTarefas() {
-      // Chama a função do TarefasList para pegar as tarefas atualizadas
+      // Chama a função do Tarefas para pegar as tarefas atualizadas
     },
   },
-};
+}
 </script>

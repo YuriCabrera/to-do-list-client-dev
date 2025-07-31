@@ -38,7 +38,7 @@ export default {
         descricao: this.descricao,
       })
       .then(() => {
-        this.$emit('tarefa-adicionada'); // Emite evento para atualizar a lista
+        this.$emit('tarefa-adicionada');
         this.show = false;
         this.titulo = '';
         this.descricao = '';

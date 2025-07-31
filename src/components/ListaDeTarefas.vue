@@ -17,37 +17,39 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data() {
     return {
       tarefas: [],
       showForm: false,
-    };
+    }
   },
   mounted() {
-    this.getTarefas();
+    this.getTarefas()
   },
   methods: {
     getTarefas() {
-      axios.get('http://localhost:8000/api/tarefas') // Substitua pela URL da sua API Laravel
-        .then(response => {
-          this.tarefas = response.data;
+      axios
+        .get('http://localhost:8000/api/tarefas') // API Laravel
+        .then((response) => {
+          this.tarefas = response.data
         })
-        .catch(error => {
-          console.error("Erro ao obter tarefas:", error);
-        });
+        .catch((error) => {
+          console.error('Erro ao obter tarefas:', error)
+        })
     },
     deleteTarefa(id) {
-      axios.delete(`http://localhost:8000/api/tarefas/${id}`)
+      axios
+        .delete(`http://localhost:8000/api/tarefas/${id}`)
         .then(() => {
-          this.getTarefas(); // Atualiza a lista após a exclusão
+          this.getTarefas() // atualiza  apos a exclusão
         })
-        .catch(error => {
-          console.error("Erro ao excluir tarefa:", error);
-        });
+        .catch((error) => {
+          console.error('Erro ao excluir tarefa:', error)
+        })
     },
   },
-};
+}
 </script>
